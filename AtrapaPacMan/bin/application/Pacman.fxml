@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Arc?>
+
+<Pane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PacmanController">
+   <children>
+      <MenuBar fx:id="menu" layoutY="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="406.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Juego">
+              <items>
+                <MenuItem fx:id="iniciar" mnemonicParsing="false" onAction="#Iniciar" text="Iniciar" />
+                  <MenuItem fx:id="reiniciar" mnemonicParsing="false" onAction="#Reiniciar" text="Reiniciar" />
+                  <MenuItem fx:id="salir" mnemonicParsing="false" onAction="#Salir" text="Salir" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Archivo">
+              <items>
+                  <MenuItem fx:id="cargar" mnemonicParsing="false" onAction="#Cargar" text="Cargar partida" />
+                <MenuItem fx:id="guardar" mnemonicParsing="false" onAction="#Guardar" text="Guardar partida" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ver">
+              <items>
+                <MenuItem fx:id="puntajes" mnemonicParsing="false" onAction="#Puntajes" text="Mejores puntajes" />
+                  <MenuItem fx:id="informacion" mnemonicParsing="false" onAction="#Informacion" text="Sobre el juego" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Arc fx:id="pacman1" fill="DODGERBLUE" layoutX="34.0" layoutY="240.0" length="270.0" onMouseClicked="#Atrapado" radiusX="20.0" radiusY="20.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" visible="false" />
+      <Arc fx:id="pacman2" fill="DODGERBLUE" layoutX="273.0" layoutY="127.0" length="270.0" onMouseClicked="#Atrapado" radiusX="25.0" radiusY="25.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" visible="false" />
+      <Arc fx:id="pacman3" fill="DODGERBLUE" layoutX="405.0" layoutY="250.0" length="270.0" onMouseClicked="#Atrapado" radiusX="30.0" radiusY="30.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" visible="false" />
+      <Arc fx:id="pacman4" fill="DODGERBLUE" layoutX="273.0" layoutY="386.0" length="270.0" onMouseClicked="#Atrapado" radiusX="35.0" radiusY="35.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" visible="false" />
+      <Label layoutX="415.0" layoutY="6.0" text="Rebotes:" />
+      <Label fx:id="rebotes" layoutX="472.0" layoutY="6.0" text="0" />
+   </children>
+</Pane>

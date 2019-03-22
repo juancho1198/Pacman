@@ -1,0 +1,7 @@
+#nivel
+0
+#radio posX posY espera direccion rebotes
+30 20 280	10	IZQUIERDA	0	false
+35	250	50	12	ARRIBA	0	false
+40	480	280	14	DERECHA	0	false
+45	250	510	16	ABAJO	0	false
